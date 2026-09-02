@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ShopNest - Shop Smarter, Live Better</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <div class="container nav-top">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2l1.5 4h9L18 2"/><path d="M3.5 6h17l-1.6 12.5a2 2 0 0 1-2 1.5H7.1a2 2 0 0 1-2-1.5L3.5 6z"/></svg>
+      ShopNest
+    </a>
+
+    <form class="nav-search" action="products.html" method="get">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" name="search" placeholder="Search for products...">
+    </form>
+
+    <div class="nav-icons">
+      <a href="cart.html" class="icon-btn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2l1.5 4h9L18 2"/><path d="M3.5 6h17l-1.6 12.5a2 2 0 0 1-2 1.5H7.1a2 2 0 0 1-2-1.5L3.5 6z"/><circle cx="9.5" cy="21" r="1"/><circle cx="15.5" cy="21" r="1"/></svg>
+        <span class="cart-count">0</span>
+      </a>
+      <button id="navMenuToggle" class="nav-menu-toggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="nav-bottom">
+    <div class="container">
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">All Products</a>
+        <a href="products.html?category=Electronics">Electronics</a>
+        <a href="products.html?category=Fashion">Fashion</a>
+        <a href="products.html?category=Shoes">Shoes</a>
+        <a href="products.html?category=Accessories">Accessories</a>
+        <a href="products.html?category=Home+%26+Living">Home &amp; Living</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-text">
+      <span class="hero-tag">✨ New Season Arrivals</span>
+      <h1>Everything You Need, All In One Place</h1>
+      <p>Discover top-quality electronics, fashion, shoes, and more — at prices you'll love, delivered right to your door.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="products.html" class="btn btn-accent">Shop Now</a>
+        <a href="#offers" class="btn btn-outline" style="background:transparent; border-color:rgba(255,255,255,0.5); color:#fff;">View Deals</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&q=80&auto=format&fit=crop" alt="Shopping bags" onerror="handleImgError(this)">
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section class="section container">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Shop by Category</h2>
+      <p class="section-subtitle" style="margin-bottom:0">Find exactly what you're looking for</p>
+    </div>
+  </div>
+  <div class="categories-grid">
+    <a href="products.html?category=Electronics" class="category-card">
+      <div class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="12" rx="2"/><line x1="8" y1="20" x2="16" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/></svg></div>
+      <span>Electronics</span>
+    </a>
+    <a href="products.html?category=Fashion" class="category-card">
+      <div class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4l4 3-2 3h-2v10H8V10H6L4 7l4-3 4 2 4-2z"/></svg></div>
+      <span>Fashion</span>
+    </a>
+    <a href="products.html?category=Shoes" class="category-card">
+      <div class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18h18v2H3z"/><path d="M4 18v-4l3-1 2-3 4 1 3 4h4l-1 3"/></svg></div>
+      <span>Shoes</span>
+    </a>
+    <a href="products.html?category=Accessories" class="category-card">
+      <div class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+      <span>Accessories</span>
+    </a>
+    <a href="products.html?category=Home+%26+Living" class="category-card">
+      <div class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></div>
+      <span>Home &amp; Living</span>
+    </a>
+    <a href="products.html" class="category-card">
+      <div class="category-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+      <span>View All</span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== FEATURED PRODUCTS ===== -->
+<section class="section container">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">Featured Products</h2>
+      <p class="section-subtitle" style="margin-bottom:0">Hand-picked bestsellers our customers love</p>
+    </div>
+    <a href="products.html" class="btn btn-outline">View All Products</a>
+  </div>
+  <div class="products-grid" id="featuredProducts"></div>
+</section>
+
+<!-- ===== SPECIAL OFFER ===== -->
+<section class="section container" id="offers">
+  <div class="offer-banner">
+    <div>
+      <h2>Mega Sale — Up to 25% Off</h2>
+      <p>Limited-time discounts across electronics, fashion, and more. Don't miss out!</p>
+    </div>
+    <a href="products.html" class="btn btn-dark">Shop the Sale</a>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section container">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle" style="margin-bottom:0">Real feedback from real shoppers</p>
+    </div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <span class="stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg></span>
+      <p>"Fast delivery and the product quality exceeded my expectations. Will definitely shop here again!"</p>
+      <div class="testimonial-author">
+        <img src="https://i.pravatar.cc/100?img=47" alt="Sara Ahmed" onerror="handleImgError(this)">
+        <div>
+          <div class="t-name">Sara Ahmed</div>
+          <div class="t-role">Verified Buyer</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <span class="stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg></span>
+      <p>"Great variety of products and the checkout process was super smooth. Highly recommended store."</p>
+      <div class="testimonial-author">
+        <img src="https://i.pravatar.cc/100?img=12" alt="Bilal Raza" onerror="handleImgError(this)">
+        <div>
+          <div class="t-name">Bilal Raza</div>
+          <div class="t-role">Verified Buyer</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <span class="stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.6 6.1.6-4.6 4.1 1.3 6-5.4-3.2-5.4 3.2 1.3-6-4.6-4.1 6.1-.6z"/></svg></span>
+      <p>"Customer support was quick to respond and helped me pick the right size. Love this shop!"</p>
+      <div class="testimonial-author">
+        <img src="https://i.pravatar.cc/100?img=25" alt="Fatima Noor" onerror="handleImgError(this)">
+        <div>
+          <div class="t-name">Fatima Noor</div>
+          <div class="t-role">Verified Buyer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="section container">
+  <div class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest deals, new arrivals, and exclusive offers straight to your inbox.</p>
+    <form class="newsletter-form" id="newsletterForm">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit" class="btn btn-accent">Subscribe</button>
+    </form>
+    <p class="newsletter-msg" id="newsletterMsg"></p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2l1.5 4h9L18 2"/><path d="M3.5 6h17l-1.6 12.5a2 2 0 0 1-2 1.5H7.1a2 2 0 0 1-2-1.5L3.5 6z"/></svg>
+          ShopNest
+        </a>
+        <p>Your one-stop shop for electronics, fashion, shoes, accessories, and home essentials — quality products at honest prices.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">All Products</a>
+        <a href="cart.html">Cart</a>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="products.html?category=Electronics">Electronics</a>
+        <a href="products.html?category=Fashion">Fashion</a>
+        <a href="products.html?category=Shoes">Shoes</a>
+        <a href="products.html?category=Home+%26+Living">Home &amp; Living</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">FAQs</a>
+        <a href="#">Shipping Info</a>
+        <a href="#">Returns &amp; Refunds</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 ShopNest. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
