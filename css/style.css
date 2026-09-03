@@ -390,6 +390,7 @@ button { cursor: pointer; }
   background: linear-gradient(120deg, var(--accent) 0%, #c2410c 100%);
   border-radius: var(--radius-lg);
   padding: 40px;
+  margin:20px 0;
   color: var(--white);
   display: flex;
   align-items: center;
@@ -428,6 +429,7 @@ button { cursor: pointer; }
   border-radius: var(--radius-lg);
   padding: 44px;
   text-align: center;
+  margin:20px 0;
 }
 .newsletter h2 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
 .newsletter p { opacity: 0.8; margin-bottom: 24px; }
